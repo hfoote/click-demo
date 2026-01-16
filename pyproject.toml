@@ -1,16 +1,18 @@
 [project]
 name = "click-demo"
 version = "0.1.0"
-description = "Add your description here"
+description = "Hello CLI, following Click's documentation"
 readme = "README.md"
 authors = [
     { name = "hfoote", email = "haydenfoote@arizona.edu" }
 ]
-requires-python = ">=3.8"
-dependencies = []
+requires-python = ">=3.14"
+dependencies = [
+    "click>=8.1.8",
+]
 
 [project.scripts]
-click-demo = "click_demo:main"
+hello = "click_demo.cli:cli"
 
 [build-system]
 requires = ["uv_build>=0.9.10,<0.10.0"]
