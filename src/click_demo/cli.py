@@ -13,14 +13,11 @@ def cli():
 # removing leading dashes from the option name. You can set default values and a 
 # message to be displayed in the command's help page. 
 # For more on options, see https://click.palletsprojects.com/en/stable/options/
-@click.option('--count', 'n', default=1, help='Number of greetings')
-@click.option('--name', help="The person to greet")
+@click.option("--count", "n", default=1, help='Number of greetings')
+# to add arguments, use the argument decorator. For more on these, see 
+# https://click.palletsprojects.com/en/stable/arguments/
+@click.argument("name", type=str)
 def greeting(n, name):
 	"""Greets NAME for a total of COUNT times."""
 	for i in range(n):
-		if name is not None:
-			click.echo(f"Hello, {name}!")
-		else:
-			click.echo(f"Hello!")
-
-
+		click.echo(f"Hello, {name}!")
