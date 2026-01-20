@@ -12,7 +12,7 @@ dependencies = [
 ]
 
 [project.scripts]
-hello = "click_demo.cli:cli"
+greeting = "click_demo.cli:greeting"
 
 [build-system]
 requires = ["uv_build>=0.9.10,<0.10.0"]
